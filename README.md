@@ -2,7 +2,7 @@
 
 En este proyecto he puesto en práctica una limpieza y transformación de las imágenes iniciales para aislar los objetos a detectar posteriormente por la red convolucional, el proyecto sigue en proceso
 
-### Prerequesitos
+### :pencil2: Prerequesitos
 
 Para poder visualizar correctamente el proyecto deberás tener instaladas librerías de computer vision como *OpenCV*, y aquellas destinadas a trabajar con redes convolucionales como *tensorflow*. Por supuesto todas las habituales librerías de análisis y visualización.
 
@@ -11,7 +11,7 @@ pip install opencv-python
 pip install tensorflow
 ```
 
-### Limpieza
+### :put_litter_in_its_place: Limpieza
 
 Para la limpieza de la imagen he empleado una serie de filtros y transformaciones que he encapsulado en una función y luego ha pasado una por una por todas las imágenes de los sets de entrenamiento y validación. Después de numerosas pruebas y errores, esta fue la fórmula mágica
 Decidí dividir la imagen en la escala de color RGB, y tomando tan sólo la capa azul que era la que resultaba más fácil a la hora de retirar las imágenes horizontales que ensuciaban gran parte de la ilustración. 
@@ -43,7 +43,7 @@ def cleaning_img(img):
     
 ```
 
-### Modelado
+### :construction_worker: Modelado
 
 Tras la limpieza, puse en marcha un modelo tirando de Redes Convolucionales, los que empleamos para data no tabular/compleja (como imágenes). El modelo está en pruebas todavía, empecé por algo sencillo que, viniendo de una problemática de regresión, me permite seguir ajustándolo (una capa de salida que tira de una regresión lineal).
 
@@ -61,18 +61,12 @@ model.compile(optimizer='adam',
 ```
 
 
-## Built With
+## :wrench: Built With
 
 * [Python](https://www.python.org/) - Lenguaje
 * [OpenCV](https://opencv.org/) - Computer Vision
 * [TensorFlow](https://www.tensorflow.org/api_docs) - CNN
 
-## Authors
+## :star2: Authors
 
 * **Lili Casanova** - 2024
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
